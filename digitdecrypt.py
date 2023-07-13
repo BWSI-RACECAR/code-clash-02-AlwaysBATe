@@ -30,10 +30,12 @@ class Solution:
     def digitdecrypt(self, num):
             #type num: int
             #return type: int
+            if num <= 9:
+                tmp = num
             while num >= 10:
                 tmp = int(num) % 10
                 tmp += int(num) / 10
-                num = tmp
+                num = int(tmp)
             #TODO: Write code below to returnn an int with the solution to the prompt.
             return int(tmp)
 def main():
